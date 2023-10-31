@@ -1,0 +1,99 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num;
+    do
+    {
+
+        printf("Selecione um numero de 1 a 7:\n\n");
+        printf("01. Domingo.\n");
+        printf("02. Segunda.\n");
+        printf("03. Terça.\n");
+        printf("04. Quarta.\n");
+        printf("05. Quinta.\n");
+        printf("06. Sexta.\n");
+        printf("07. Sabado.\n\n");
+        printf("08. Sair.\n\n");
+        scanf("%d", &num);
+        switch (num)
+        {
+
+            case 1:
+                printf("Exemplos de tarefas que faço no domingo.\n\n");
+                for (int i = 1; i <= 3; i++)
+                {
+                    if (i == 1)
+                    {
+                        printf("01. Jogar VALORANT.\n");
+                    }
+                    else if (i == 2)
+                    {
+                        printf("02. Visitar os parentes.\n");
+                    }
+                    else
+                    {
+                        printf("03. Lavar a moto.\n\n");
+                    }
+                }
+                break;
+            case 2:
+                int n = 1;
+                int num;
+                printf("Segue a tabuada do 1 ate o 10.\n");
+
+                for (int i = 1; i <= 10; i++)
+                {
+                    printf("%d x %d = %d\n", n, i, n * i);
+                }
+
+                break;
+            case 3:
+                printf("Hoje é dia de NBA.");
+                break;
+            case 4:
+                printf("Segue a contagem regressiva.\n");
+                for (int i = 10; i >= 0; i--)
+                {
+                    printf("%d\n", i);
+                }
+                break;
+            case 5:
+                printf("Quase la.\n");
+                break;
+            case 6:
+                printf("Sextou.\n");
+                break;
+            case 7:
+                printf("Exemplos de tarefas que faço no sabado.\n\n");
+                for (int i = 1; i <= 3; i++)
+                {
+                    if (i == 1)
+                    {
+                        printf("01. Dormir ate tarde.\n");
+                    }
+                    else if (i == 2)
+                    {
+                        printf("02. Comer fora.\n");
+                    }
+                    else
+                    {
+                        printf("03. Revisao de conteudo (estudar).\n\n");
+                    }
+                }
+                break;
+            case 8:
+                printf("Ok, saindo...");
+                break;
+
+            default:
+                printf("Opção invalida, tente novamente.\n\n");
+
+        }
+    }
+    while (num != 8);
+
+
+    return 0;
+}

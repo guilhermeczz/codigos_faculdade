@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    int n, i;
+    double maiorAltura = 0.0, menorAltura = 0.0, somaMulheres = 0.0, mediaMulheres = 0.0;
+    int numHomens = 0, numMulheres = 0;
+
+    printf("Quantas pessoas você vai digitar?\n");
+    scanf("%d", &n);
+    
+    char genero[n];
+    double altura[n];
+    double media_fem[n];
+    
+    
+    for (i = 0; i < n; i++) {
+        printf("Digite o genero da pessoa M/F:\n");
+        scanf("%s", &genero[i]);
+        printf("Digite a altura:\n");
+        scanf("%lf", &altura[i]);
+        
+        if (genero[i] == 'M' || genero[i] == 'm') {
+            numHomens++;
+        } else if (genero[i] == 'F' || genero[i] == 'f') {
+            numMulheres++;
+            somaMulheres += altura[i];
+        }
+       if (altura[i] > maiorAltura) {
+            maiorAltura = altura[i];
+        }
+
+        if (i == 0 || altura[i] < menorAltura) {
+            menorAltura = altura[i];
+        }
+    }  
+    printf("A maior altura informada foi: %.2f\n", maiorAltura);
+    printf("A menor altura informada foi: %.2f\n", menorAltura);
+    
+     if (numMulheres > 0) {
+        double mediaMulheres = somaMulheres / numMulheres;
+        printf("A média de altura das mulheres é: %.2f\n", mediaMulheres);
+    } else {
+        printf("Nenhuma altura de mulher foi informada.\n");
+    }
+
+    printf("O número de homens é: %d\n", numHomens);
+   
+    return 0;
+}

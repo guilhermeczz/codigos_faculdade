@@ -1,0 +1,87 @@
+#include <stdio.h>
+
+ void subtracao();
+ void multiplicacao();
+ void soma();
+ 
+int main() 
+{
+   do{
+     int opcao;
+    
+    printf("SELECIONE A OPÇÃO QUE DESEJA EXECUTAR:\n\n01. SOMA\n02. SUBTRACAO\n03. MULTIPLICAÇÃO\n04. CASO DESEJE SAIR\n\n");
+    scanf("%d", &opcao);
+    
+    switch (opcao){
+        
+        case 1:
+            soma();
+            break;
+        case 2:
+            subtracao();
+            break;
+        case 3: 
+            multiplicacao();
+        case 4:
+            printf("OK, SAINDO...");
+            break;
+    } 
+        while(opcao != 4);    
+   
+}
+
+ void soma()
+{
+    int n1, n2, res, i;
+    
+    printf("Digite dois numeros inteiros: ");
+    scanf("%d %d", &n1, &n2);
+    
+    res = n1 + n2, res;
+    
+    printf("A soma de %d e %d é igual a: %d \n\n", n1, n2, res);
+    
+    if (res < 18)
+    {
+        printf("Parabens\n\n");
+    }
+    else if ((res >= 18 && res < 65)) 
+    {
+        printf("Dorflex\n\n");
+    }
+    else 
+    {
+        printf("Vá ao medico!\n");
+    }
+
+     for(i=res; i >= 0; i--)
+    {
+        printf("%d\n", i);
+    }
+    
+    printf("A subtração entre %d e %d é igual a: %d\n\n",n1, n2, subtracao(n1,n2));
+    
+}
+
+    void multiplicacao()
+    {
+        int a, b;
+        int multi, res,  i = 1;
+        while(i <= res)
+        {
+        printf("%d X %d: %d\n", res, i, res*i);
+            i++;
+        
+        }    
+    }
+   
+ 
+ 
+ void subtracao()
+    {
+        int a, b;
+        int sub;
+        sub = a - b;
+        
+   }
+

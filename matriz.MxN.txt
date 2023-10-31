@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int n, m, qntdnegativos;
+    
+    printf("Qual a quantidade de linhas da matriz?\n");
+    scanf("%d", &n);
+    printf("Qual a quantidade de colunas da matriz?\n");
+    scanf("%d", &m);
+    
+    int matriz[n][m];
+    
+    
+for(int i = 0; i<n; i++){
+    for(int j = 0; j < m; j++){
+            printf("Elemento[%d, %d]\n", i, j);
+            scanf("%d", &matriz[i][j]);
+    }
+}
+    qntdnegativos = 0;
+    for(int i =0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            if(matriz[i][j] < 0){
+                qntdnegativos++;
+            }
+         }
+    }
+    
+    printf("\nQuantidade de negativos: %d\n", qntdnegativos);
+    
+    return 0;
+}

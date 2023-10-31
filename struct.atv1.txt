@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct{
+    char Nome[12];
+    int Idade;
+    float Nota;
+}Aluno;
+    
+   void ImprimeAluno(Aluno A){
+        printf("Nome: %s\n Idade: %d\n Nota; %.f",A.Nome, A.Idade, A.Nota);
+    }
+   
+    
+int main() {
+    
+    Aluno A;
+    A.Idade = 18;
+    A.Nota = 9.90;
+    strcpy(A.Nome, "Guilherme");
+
+    
+   ImprimeAluno(A);
+    
+    
+    return 0;
+}

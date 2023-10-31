@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct{
+    int lado_a;
+     int lado_b;
+}retangulo;
+    
+   void calculo(retangulo retan){
+       int area, perimetro;
+        
+         perimetro = 2 * (retan.lado_a + retan.lado_b);
+         area = retan.lado_a * retan.lado_b;
+         
+        printf("Area do retangulo:%d\n", area);
+        printf("perimetro do retangulo:%d\n", perimetro);
+    }
+   
+int main() {
+    
+    retangulo retangulo;
+    
+    printf("Digite o valor para um lado A do retângulo (base): ");
+    scanf("%d", &retangulo.lado_a);
+
+    printf("Digite o valor para o lado B do retângulo (altura): ");
+    scanf("%d", &retangulo.lado_b);
+
+    calculo(retangulo);
+
+    return 0;
+}
